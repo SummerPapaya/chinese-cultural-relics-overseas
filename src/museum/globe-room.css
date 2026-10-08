@@ -1,0 +1,88 @@
+.museum-app .brand-mark { width:56px; height:56px; object-fit:contain; flex-shrink:0; }
+.landing-header .brand-mark { width:61px; height:61px; }
+.museum-app .museum-brand { gap:15px; }
+.night-museum .three-room.globe-room { inset:0; height:100%; background:#020305; }
+.globe-room .three-canvas { z-index:1; }
+.globe-room .globe-hint,.globe-room .room-caption { z-index:2; }
+.night-museum .room-caption { color:#b49a76; bottom:90px; }
+.night-museum .stage-bottom>p { max-width:410px; }
+.night-museum .scene-surface:after { background:linear-gradient(#02030555,transparent 18%,transparent 84%,#02030544); }
+.night-museum .globe-room .room-loading { background:#020305; }
+.globe-hint { position:absolute; bottom:76px; left:50%; transform:translateX(-50%); font:400 12px/1.6 var(--serif); letter-spacing:2px; color:#c0a176; pointer-events:none; white-space:nowrap; }
+.globe-room .three-canvas canvas { touch-action:none; }
+.night-museum .museum-tooltip { top:34%; left:25%; width:260px; }
+.night-museum .is-full .globe-room { inset:0; }
+.night-museum .globe-room .room-caption { max-width:260px; line-height:1.8; }
+.night-museum .stage-topline { pointer-events:none; }
+.night-museum .scene-controls button { min-height:38px; min-width:38px; }
+.night-museum .about-dialog .brand-mark { margin-bottom:24px; }
+.night-museum .stage-topline, .night-museum .room-caption, .night-museum .museum-mini-title small, .night-museum .object-era, .night-museum .feature-english { font-size:12px; }
+.night-museum .view-switch button, .night-museum .visit-object { font-size:14px; }
+.night-museum .museum-stage { background:#020305; }
+.night-museum .view-switch { background:#080a0dc9; }
+.night-museum .scene-controls button { background:#090b0fd9; }
+.night-museum .museum-header { background:#08090b; }
+.night-museum .timeline-nav-button { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; color:#dfc496; font-size:12px; letter-spacing:.06em; padding:9px 12px; border:1px solid #9b78484d; background:#21191299; transition:border-color .2s,background .2s; }
+.night-museum .timeline-nav-button:hover { border-color:#c79b5b; background:#382719; }
+.landing-header-actions { display:flex; align-items:center; gap:23px; }
+.landing-header-actions>a { display:inline-flex; align-items:center; gap:5px; color:#dcc092; font:400 12px var(--serif); letter-spacing:.08em; border-bottom:1px solid #9c784950; padding:8px 0; }
+.landing-footer .landing-stats { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.landing-footer .landing-stats>div { display:flex; gap:38px; }
+.landing-footer .landing-stats>div>span { display:flex; align-items:center; gap:9px; }
+.landing-footer .landing-stats p { font-size:10px; line-height:1.5; letter-spacing:.03em; color:#b49b74; text-align:center; }
+
+.detail-visual { position:sticky; top:0; align-self:start; height:85dvh; min-height:500px; background:#06080b; }
+.object-viewer { height:100%; display:grid; grid-template-rows:auto minmax(0,1fr) auto auto; padding:18px 14px 16px; }
+.object-view-tabs { display:flex; justify-content:center; gap:5px; padding:0 38px; }
+.object-view-tabs button { display:flex; align-items:center; gap:7px; color:#ac9d86; font-size:14px; padding:9px 12px; border:1px solid transparent; }
+.object-view-tabs button.active { color:#ecd1a0; border-color:#78604566; background:#201b15; }
+.object-view-stage { position:relative; min-height:0; overflow:hidden; }
+.object-view-canvas { position:absolute; inset:0; }
+.object-view-canvas canvas { width:100%; height:100%; display:block; touch-action:none; }
+.object-view-canvas canvas:focus-visible { outline:1px solid #c4a36c; outline-offset:-4px; }
+.object-view-photo { height:100%; width:100%; object-fit:contain; padding:24px 10px; }
+.object-view-hint { position:absolute; bottom:9px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.7; color:#c1ae91; pointer-events:none; }
+.object-view-message { position:absolute; inset:0; display:grid; place-content:center; text-align:center; padding:24px; font-size:14px; color:#c1ae91; }
+.object-view-controls { display:flex; align-items:center; justify-content:center; gap:8px; padding:9px 0; }
+.object-view-controls button { display:flex; align-items:center; justify-content:center; min-width:40px; min-height:40px; border:1px solid #69523a77; color:#e4c99d; background:#141415; }
+.object-view-controls .object-view-expand { gap:8px; font-size:14px; padding:8px 13px; margin-left:4px; }
+.object-view-note { text-align:center; padding:3px 8px 0; font-size:12px; color:#a59681; line-height:1.65; }
+
+@media(min-width:761px) and (max-width:1100px) {
+  .night-museum.museum-opened .globe-room .three-canvas { right:280px; width:auto; }
+}
+
+@media(max-width:760px) {
+  .landing-header-actions { gap:12px; }
+  .landing-header-actions>a { font-size:10px; }
+  .night-museum .timeline-nav-button { margin-left:auto; font-size:11px; padding:7px 8px; }
+  .night-museum .timeline-nav-button svg { display:none; }
+  .landing-footer .landing-stats>div { gap:22px; }
+  .landing-footer .landing-stats p { max-width:290px; font-size:9px; }
+  .museum-app .brand-mark { width:44px; height:44px; }
+  .landing-header .brand-mark { width:48px; height:48px; }
+  .museum-app .museum-brand { gap:10px; }
+  .night-museum .globe-hint { bottom:136px; letter-spacing:1px; font-size:12px; }
+  .night-museum.museum-opened .globe-hint { display:none; }
+  .night-museum .museum-tooltip { left:50%; top:25%; font-size:14px; max-width:calc(100% - 36px); }
+  .night-museum .room-caption { bottom:100px; left:50%; transform:translateX(-50%); font-size:12px; max-width:none; white-space:nowrap; }
+  .night-museum .stage-bottom { left:15px; right:15px; bottom:18px; flex-direction:column; gap:10px; }
+  .night-museum .scene-controls { gap:5px; }
+  .night-museum .scene-controls button { min-width:38px; min-height:38px; }
+  .night-museum .map-key { font-size:12px; gap:14px; flex-direction:row; }
+  .night-museum .globe-room .three-canvas { inset:0; height:100%; }
+  .night-museum.museum-opened .museum-stage { min-height:max(720px,calc(500px + var(--collection-height,250px))); }
+  .night-museum.museum-opened .globe-room .three-canvas { inset:0; height:100%; }
+  .night-museum.museum-opened .featured-object { bottom:110px; }
+  .night-museum .museum-mini-title { font-size:14px; }
+  .night-museum .museum-mini-title small { font-size:12px; line-height:1.6; }
+  .night-museum .feature-copy h2 { font-size:16px; }
+  .night-museum .feature-english, .night-museum .object-era { font-size:12px; }
+  .night-museum .featured-object .visit-object { min-height:34px; font-size:14px; }
+  .night-museum .view-switch button { font-size:13px; }
+  .detail-visual { position:relative; min-height:340px; height:55svh; max-height:460px; }
+  .object-viewer { padding:16px 10px 10px; }
+  .object-view-tabs button { font-size:13px; padding:8px 10px; }
+  .object-view-controls { gap:6px; padding:6px 0; }
+  .object-view-controls .object-view-expand { font-size:13px; padding:8px 10px; }
+}

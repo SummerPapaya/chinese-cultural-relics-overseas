@@ -1,0 +1,24 @@
+.themed-collections{margin:30px 0 24px}
+.themed-collections-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;color:#bb9560;font-size:11px;letter-spacing:.2em}
+.themed-collections-heading button{display:flex;align-items:center;gap:6px;color:#d3ab72;font-size:12px;letter-spacing:.04em}
+.themed-collections-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.themed-collection{position:relative;min-height:164px;padding:18px 22px 20px;text-align:left;border:1px solid #73583a8c;background:linear-gradient(135deg,#291c18,#161310 72%);color:#ddc7a5;overflow:hidden;transition:border-color .25s,transform .25s,background .25s}
+.themed-collection:before{content:'';position:absolute;width:130px;height:130px;right:-58px;top:-72px;border:1px solid #ae875054;border-radius:50%;box-shadow:0 0 0 17px #b08b3611,0 0 0 33px #b08b3609;transition:transform .5s}
+.themed-collection:hover,.themed-collection.selected{border-color:#c29962;transform:translateY(-2px);background:linear-gradient(135deg,#3b241b,#1c1611 75%)}
+.themed-collection:hover:before{transform:scale(1.18)}
+.themed-collection .collection-number{display:block;color:#9f7950;font-size:10px;letter-spacing:.18em;margin-bottom:15px}
+.themed-collection strong{display:block;font:400 22px/1.25 "Songti SC","Noto Serif SC",serif;letter-spacing:.1em;color:#ebd5ac}
+.themed-collection small{display:block;margin-top:3px;color:#aa916e;font-size:11px;letter-spacing:.05em}
+.themed-collection p{max-width:90%;margin:13px 0 0;color:#ad9a82;font-size:12px;line-height:1.6}
+.themed-collection>svg{position:absolute;right:19px;bottom:19px;color:#c59e6a}
+.rights-placeholder{width:100%;height:100%;min-height:130px;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:18px;text-align:center;line-height:1.55;font-size:12px;color:#c2ab86!important;background:radial-gradient(circle at 50% 34%,#453524,#201b17 64%,#171310);box-sizing:border-box}
+.rights-placeholder .placeholder-emblem{display:grid;place-items:center;width:48px;height:48px;border:1px solid #947249a1;border-radius:50%;font:400 22px "Songti SC",serif;color:#c6a574}
+.rights-placeholder small{font-size:10px;color:#968166}
+.object-card-image .rights-placeholder{min-height:100%}
+.museum-object-tray .rights-placeholder,.feature-photo .rights-placeholder{min-height:100%}
+.museum-object-tray .rights-placeholder{padding:0}.museum-object-tray .rights-placeholder span:not(.placeholder-emblem),.museum-object-tray .rights-placeholder small{display:none}.museum-object-tray .rights-placeholder .placeholder-emblem{width:30px;height:30px;font-size:14px}
+.restricted-detail{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px;background:#201813!important;padding:24px}
+.restricted-detail .rights-placeholder{height:auto;min-height:260px;background:transparent}
+.restricted-detail>a{display:flex;align-items:center;gap:7px;padding:10px 16px;border:1px solid #9d7446;color:#e1bc83;text-decoration:none}
+@media(max-width:780px){.themed-collections-grid{grid-template-columns:1fr}.themed-collection{min-height:135px}.themed-collection .collection-number{margin-bottom:7px}}
+@media(prefers-reduced-motion:reduce){.themed-collection,.themed-collection:before{transition:none}}

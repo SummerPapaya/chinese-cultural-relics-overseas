@@ -1,0 +1,39 @@
+node_modules/
+dist/
+*.map
+.DS_Store
+*.local
+.env*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+credentials.json
+secrets.*
+*.log
+.openai/
+design/
+output/
+MUSEUM-PREVIEW.md
+# This optional Pages workflow needs a GitHub token with workflow scope;
+# omit it from the initial public push rather than requesting broader access.
+.github/workflows/deploy-pages.yml
+# Own museum photographs stay local; do not commit them to this release repo.
+public/art/nelson-guanyin.jpg
+public/art/penn-saluzi.jpg
+public/art/penn-quanmaogua.jpg
+# Withhold inherited/third-party images until their exact redistribution terms
+# and source records are verified. The corresponding records remain in the app.
+public/art/bm-luohan.jpg
+public/art/bm-admonitions.jpg
+public/art/bm-david-vases.jpg
+public/art/aam-rhino.jpg
+public/art/nelson-empress.jpg
+public/art/tnm-hibiscus.jpg
+public/art/guimet-pig-dragon.jpg
+public/art/guimet-polo.jpg
+public/art/rom-maitreya.jpg
+public/art/freer-luo-nymph-verified.jpg
+public/earth-ink.jpg

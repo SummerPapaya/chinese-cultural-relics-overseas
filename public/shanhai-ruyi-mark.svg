@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
+  <title>山海归藏 · 四合如意团花</title>
+  <defs>
+    <path id="ruyi-petal" d="M48 36C41 33 31 29 32 21C33 15 40 14 44 18C43 13 45 9 48 8C51 9 53 13 52 18C56 14 63 15 64 21C65 29 55 33 48 36Z"/>
+    <path id="cloud-scroll" d="M29 15C19 15 13 23 16 30C18 35 26 36 29 31C32 26 28 22 24 23C21 23 21 27 24 28"/>
+  </defs>
+  <circle cx="48" cy="48" r="44" fill="#24140f" stroke="#d4b57a" stroke-width="1.6"/>
+  <circle cx="48" cy="48" r="40.5" stroke="#957346" stroke-width=".7"/>
+  <g stroke="#dfc28b" stroke-width="1.8" stroke-linejoin="round">
+    <use href="#ruyi-petal"/><use href="#ruyi-petal" transform="rotate(90 48 48)"/>
+    <use href="#ruyi-petal" transform="rotate(180 48 48)"/><use href="#ruyi-petal" transform="rotate(270 48 48)"/>
+  </g>
+  <g stroke="#be9c62" stroke-width="1.5" stroke-linecap="round">
+    <use href="#cloud-scroll"/><use href="#cloud-scroll" transform="rotate(90 48 48)"/>
+    <use href="#cloud-scroll" transform="rotate(180 48 48)"/><use href="#cloud-scroll" transform="rotate(270 48 48)"/>
+  </g>
+  <path d="M48 35L61 48L48 61L35 48Z" fill="#802f24" stroke="#e0bc7f" stroke-width="1.6"/>
+  <path d="M48 41L55 48L48 55L41 48Z" stroke="#e7c98e" stroke-width="1.3"/>
+  <circle cx="48" cy="48" r="2.5" fill="#e7c98e"/>
+</svg>

@@ -1,0 +1,92 @@
+:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#e8d9bf;background:#08090b;font-synthesis:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#08090b}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid #e9bb72;outline-offset:4px}
+h1,h2,p{margin:0}
+.timeline-page{min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 50% 17%,#30312d18,transparent 36%),#08090b}
+.timeline-header{height:84px;padding:0 clamp(24px,4vw,76px);border-bottom:1px solid #57432c77;background:#0c0b0b;display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative;z-index:2}
+.timeline-brand{display:flex;align-items:center;gap:12px;min-width:0}
+.timeline-brand img{width:50px;height:50px}
+.timeline-brand strong{display:block;font:400 22px/1.2 "Songti SC","Noto Serif SC",serif;letter-spacing:.16em;color:#e6c58d;white-space:nowrap}
+.timeline-brand small{display:block;margin-top:5px;font-size:9px;letter-spacing:.17em;color:#a58c66;white-space:nowrap}
+.timeline-header nav{display:flex;align-items:center;gap:28px;color:#d9bd8b;font-size:12px}
+.timeline-header nav a,.timeline-header nav button{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.timeline-header nav button{border:1px solid #876a435e;background:#211912;padding:8px 12px;color:#e8c997}
+.timeline-hero{min-height:560px;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;padding:95px 24px 75px;background-image:linear-gradient(180deg,#08090b10,#08090b00 70%,#08090b 100%),var(--timeline-landscape);background-position:center;background-size:cover;border-bottom:1px solid #51402d55}
+.timeline-hero:before{content:'';position:absolute;width:min(760px,78vw);aspect-ratio:1;top:0;left:50%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,#c1b49310 0,transparent 65%);filter:blur(20px);pointer-events:none}
+.timeline-kicker{position:relative;color:#c9a56e;font-size:11px;letter-spacing:.3em}
+.timeline-hero h1{position:relative;margin:20px 0 21px;font:400 clamp(48px,7vw,92px)/1.35 "Songti SC","Noto Serif SC",Georgia,serif;letter-spacing:.14em;text-indent:.14em;color:#f2e4c6;text-shadow:0 5px 36px #000}
+.timeline-hero h1 span{color:#dbad6b}
+.timeline-intro{position:relative;max-width:720px;font-size:15px;line-height:2;color:#c7b69a;text-wrap:pretty;text-shadow:0 2px 14px #020203}
+.timeline-hero-foot{position:relative;margin-top:35px;display:flex;gap:50px;align-items:center;color:#bda279;font-size:11px;letter-spacing:.05em}
+.timeline-hero-foot span,.timeline-hero-foot a{display:inline-flex;align-items:center;gap:10px}
+.timeline-hero-foot i{width:5px;height:5px;border-radius:50%;background:#c65f45;box-shadow:0 0 12px #e68555}
+.timeline-hero-foot a{color:#edc996;border-bottom:1px solid #bd915d85;padding-bottom:5px}
+.timeline-method{max-width:1130px;margin:0 auto;padding:43px 24px;display:grid;grid-template-columns:250px 1fr;gap:45px;border-bottom:1px solid #5c47305e}
+.timeline-method span,.timeline-section-head span{font-size:10px;letter-spacing:.21em;color:#b88e5a}
+.timeline-method p{max-width:760px;color:#bbaa8d;line-height:1.9;font-size:13px}
+.timeline-chronology{max-width:1130px;margin:0 auto;padding:65px 24px 90px}
+.timeline-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:35px}
+.timeline-section-head p{font:400 13px "Songti SC",serif;color:#a99678}
+.timeline-list{list-style:none;margin:0;padding:0;position:relative}
+.timeline-list:before{content:'';position:absolute;left:138px;top:35px;bottom:30px;width:1px;background:linear-gradient(#a67b4d,#7b614162,#a67b4d33)}
+.timeline-event{display:grid;grid-template-columns:139px minmax(0,1fr);gap:55px;position:relative;padding:0 0 28px}
+.timeline-year{position:relative;padding-top:32px;text-align:right;color:#dfb879;font:400 31px Georgia,serif;letter-spacing:.03em}
+.timeline-year i{position:absolute;right:-61px;top:46px;width:11px;height:11px;border:2px solid #e8bb77;background:#281c12;border-radius:50%;box-shadow:0 0 16px #d79d5f66}
+.timeline-card{padding:29px 34px 27px;background:linear-gradient(145deg,#211b15c7,#121313c7);border:1px solid #775d3d70;box-shadow:0 13px 45px #0004;position:relative}
+.timeline-card:before{content:'';position:absolute;top:0;left:0;width:50px;height:1px;background:#d0a470}
+.timeline-card-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#a98e6a;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.timeline-card h2{font:400 clamp(20px,2.2vw,27px)/1.55 "Songti SC","Noto Serif SC",Georgia,serif;color:#f0d8ad;margin:18px 0 10px}
+.timeline-card>p{color:#c0b29c;font-size:14px;line-height:1.95}
+.timeline-sources{display:flex;align-items:flex-start;gap:20px;border-top:1px solid #745c3c5c;margin-top:23px;padding-top:17px}
+.timeline-sources>span{color:#ac8b5e;font-size:10px;letter-spacing:.1em;white-space:nowrap;padding-top:5px}
+.timeline-sources>div{display:flex;gap:8px;flex-wrap:wrap}
+.timeline-sources a{display:inline-flex;gap:5px;align-items:center;border:1px solid #8168476b;color:#d6b887;font-size:11px;line-height:1.4;padding:6px 9px;transition:background .2s,border-color .2s}
+.timeline-sources a:hover{background:#49321d88;border-color:#c99a5e}
+.timeline-endnote{max-width:1082px;margin:0 auto 90px;padding:39px 43px;border:1px solid #72553475;background:linear-gradient(100deg,#352314aa,#131416);display:grid;grid-template-columns:140px 1fr auto;gap:22px;align-items:center}
+.timeline-endnote span{color:#b99360;font-size:11px;letter-spacing:.2em}
+.timeline-endnote p{font:400 16px/1.8 "Songti SC",serif;color:#e1cba9}
+.timeline-endnote a{display:inline-flex;align-items:center;gap:7px;color:#ebc48e;white-space:nowrap;font-size:12px;border-bottom:1px solid #a68050;padding-bottom:5px}
+.timeline-footer{border-top:1px solid #513d2866;padding:26px clamp(24px,4vw,76px);display:flex;justify-content:space-between;gap:25px;color:#8b765b;font-size:10px;letter-spacing:.07em}
+.ink-cursor-effects{position:fixed;inset:0;z-index:9999;pointer-events:none;width:100vw;height:100vh}
+.ink-pointer-active,.ink-pointer-active body,.ink-pointer-active .timeline-page *{cursor:var(--ink-cursor)!important}
+@media(max-width:760px){
+  .timeline-header{height:72px;padding:0 18px}
+  .timeline-brand{gap:8px}
+  .timeline-brand img{width:42px;height:42px}
+  .timeline-brand strong{font-size:17px}
+  .timeline-brand small{font-size:7px;letter-spacing:.1em}
+  .timeline-header nav{gap:9px;font-size:11px}
+  .timeline-header nav a{font-size:0;gap:0}
+  .timeline-header nav a svg{width:19px;height:19px}
+  .timeline-header nav button{padding:7px 8px;font-size:10px}
+  .timeline-hero{min-height:490px;padding:90px 23px 66px;background-position:center,70% center}
+  .timeline-kicker{font-size:9px;letter-spacing:.1em}
+  .timeline-hero h1{font-size:48px;letter-spacing:.07em;text-indent:.07em}
+  .timeline-intro{font-size:13px;line-height:1.85}
+  .timeline-hero-foot{flex-direction:column;gap:17px;font-size:10px}
+  .timeline-method{display:block;padding:31px 22px}
+  .timeline-method p{margin-top:13px;font-size:12px}
+  .timeline-chronology{padding:45px 18px 60px}
+  .timeline-list:before{left:10px;top:18px}
+  .timeline-event{display:block;padding:0 0 28px 28px}
+  .timeline-year{text-align:left;padding:0 0 8px;font-size:24px}
+  .timeline-year i{right:auto;left:-23px;top:8px;width:10px;height:10px}
+  .timeline-card{padding:20px 18px}
+  .timeline-card-meta{font-size:9px;line-height:1.6}
+  .timeline-card h2{font-size:21px}
+  .timeline-card>p{font-size:13px;line-height:1.85}
+  .timeline-sources{display:block}
+  .timeline-sources>div{margin-top:9px}
+  .timeline-sources a{font-size:10px}
+  .timeline-endnote{display:block;margin:0 18px 60px;padding:28px}
+  .timeline-endnote p{font-size:15px;margin:13px 0 17px}
+  .timeline-footer{padding:23px 18px;display:block;line-height:1.8}
+  .timeline-footer span{display:block}
+}
+@media(pointer:coarse){.ink-cursor-effects{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.timeline-sources a{transition:none}}
