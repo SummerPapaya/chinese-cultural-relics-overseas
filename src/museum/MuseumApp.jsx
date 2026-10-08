@@ -36,7 +36,7 @@ function Modal({ children, label, onClose, className='' }) {
 export default function MuseumApp() {
   const [entered,setEntered]=useState(()=>new URLSearchParams(window.location.search).get('view')==='hall')
   const [museumOpened,setMuseumOpened]=useState(false)
-  const [language, setLanguage] = useState('zh')
+  const [language, setLanguage] = useState(()=>new URLSearchParams(window.location.search).get('lang')==='en'?'en':'zh')
   const [mode, setMode] = useState(()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches?'map':'room')
   const [selectedId, setSelectedId] = useState('nelson-guanyin')
   const [museumFilter, setMuseumFilter] = useState('all')
