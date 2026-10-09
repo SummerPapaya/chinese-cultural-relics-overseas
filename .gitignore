@@ -22,6 +22,9 @@ MUSEUM-PREVIEW.md
 .github/workflows/deploy-pages.yml
 # Own museum photographs stay local; do not commit them to this release repo.
 public/art/nelson-guanyin.jpg
+public/art/nelson-empress-own.jpg
+public/art/rom-maitreya-own.jpg
+public/art/rom-homage-east-own.jpg
 public/art/penn-saluzi.jpg
 public/art/penn-quanmaogua.jpg
 # Withhold inherited/third-party images until their exact redistribution terms

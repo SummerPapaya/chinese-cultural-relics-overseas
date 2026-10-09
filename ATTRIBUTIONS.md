@@ -2,18 +2,18 @@
 
 本项目代码与界面不改变各图像的原有版权状态。正式公开或商业使用前请再次查看链接页面的最新条款。
 
-**公开仓库与本地预览不同。** 除下述三张项目作者实拍外，另有 10 张继承图片因精确文件来源或公开再分发条件尚未充分核实，暂不提交：`bm-luohan.jpg`、`bm-admonitions.jpg`、`bm-david-vases.jpg`、`aam-rhino.jpg`、`nelson-empress.jpg`、`tnm-hibiscus.jpg`、`guimet-pig-dragon.jpg`、`guimet-polo.jpg`、`rom-maitreya.jpg`、`freer-luo-nymph-verified.jpg`。来源未补齐的旧地球纹理 `earth-ink.jpg` 也暂不提交。相关馆藏记录与馆方链接仍保留，但公开版本不显示这些图片。下方对这些照片的来源描述仅记录本地预览的溯源状态，不构成公开仓库已经分发它们的声明。
+**公开图片选择。** 原先 14 条图片占位记录已逐件匹配 Wikimedia Commons 文件页，改用下列开放授权或公有领域图像；公开构建与本地预览均显示这些替代图。六张项目作者自摄照片、八张旧版待清权继承图、两张已停用的旧照与来源未补齐的 `earth-ink.jpg` 仍由 `.gitignore` 排除，也不进入构建。还有波士顿罗汉和 V&A 宜兴茶壶两条记录无合适替代图，继续显示占位。Commons 的摄影者授权并不等于场馆就拍摄或发布另行作出的许可；如有具体场馆限制，应按个案处理。
 
 - 大都会艺术博物馆：孝文帝礼佛图、药师佛壁画、易县罗汉、水月观音；馆方 Open Access，Public Domain。
 - 大英博物馆：易县罗汉、《女史箴图》、大维德花瓶；数据来自馆方，当前展示图来自 Wikimedia Commons。馆方易县罗汉下载页标注 CC BY-NC-SA 4.0。
-- 纳尔逊—阿特金斯艺术博物馆：南海观音使用项目作者馆内实拍照片；皇后礼佛图使用 Daderot / Wikimedia Commons 图。
-- 宾夕法尼亚大学博物馆：飒露紫 C395、拳毛騧 C396 均使用项目作者馆内实拍照片，不再使用原馆方图或原 Commons 图。
-- 旧金山亚洲艺术博物馆：犀牛形青铜尊；Marshall Astor / Wikimedia Commons，CC BY-SA。
+- 纳尔逊—阿特金斯艺术博物馆：南海观音与皇后礼佛图使用逐件核验的 Commons 摄影图，不公开本站作者自摄照。
+- 宾夕法尼亚大学博物馆：飒露紫 C395、拳毛騧 C396 使用 SnowFire 的 CC BY 4.0 Commons 摄影图，不公开本站作者自摄照。
+- 旧金山亚洲艺术博物馆：犀牛形青铜尊使用 Ed Bierman 的 CC BY 2.0 摄影图。
 - 波士顿美术博物馆：陈容《九龙图》；Wikimedia Commons，Public Domain。
 - 美国国立亚洲艺术博物馆：《洛神赋图》；Wikimedia Commons，Public Domain。
 - 东京国立博物馆：李迪《红白芙蓉图》；Google Art Project / Wikimedia Commons。
-- 吉美博物馆：玉猪龙、彩绘陶打马球女俑；RMN-Grand Palais / Musée Guimet，摄影署名见页面与 `src/data.js`。
-- 皇家安大略博物馆：兴化寺《弥勒净土变》；Daderot / Wikimedia Commons。
+- 吉美博物馆：玉猪龙、彩绘陶打马球女俑使用逐件对应的 Commons 摄影图，不使用旧馆方署名照。
+- 皇家安大略博物馆：《弥勒净土变》与《朝元图》东壁使用 Daderot 的 CC0 摄影图，不公开本站作者自摄照。
 - 芝加哥艺术博物馆：唐代佛立像；馆方 IIIF / Open Access，数据 CC0。
 - 克利夫兰艺术博物馆：牧溪《龙图》；馆方 Open Access。
 
@@ -22,12 +22,34 @@
 ## 项目作者实拍照片 · Own museum photographs
 
 - `public/art/nelson-guanyin.jpg`：南海观音，纳尔逊—阿特金斯艺术博物馆，馆藏号 34-10；[馆藏记录](https://art.nelson-atkins.org/objects/597/guanyin-of-the-southern-sea)。
+- `public/art/nelson-empress-own.jpg`：皇后礼佛图，纳尔逊—阿特金斯艺术博物馆，馆藏号 40-38；[馆藏记录](https://art.nelson-atkins.org/objects/8976/offering-procession-of-the-empress-as-donor-with-her-court)。
+- `public/art/rom-maitreya-own.jpg`：兴化寺《弥勒净土变》，皇家安大略博物馆，馆藏号 933.6.1；[馆方展厅说明](https://www.rom.on.ca/whats-on/galleries/bishop-white-gallery-chinese-temple-art)。
+- `public/art/rom-homage-east-own.jpg`：《朝元图》东壁中央局部，皇家安大略博物馆，馆藏号 933.6.3；[馆方藏品记录](https://collections.rom.on.ca/objects/304291/daoist-wall-painting-homage-to-the-highest-power-east-wal)。
 - `public/art/penn-saluzi.jpg`：飒露紫，宾夕法尼亚大学博物馆，馆藏号 C395；[馆藏记录](https://collections.penn.museum/collections/object/167942)。
 - `public/art/penn-quanmaogua.jpg`：拳毛騧，宾夕法尼亚大学博物馆，馆藏号 C396；[馆藏记录](https://collections.penn.museum/collections/object/239945)。
 
-三张照片由项目作者作为普通游客自行拍摄，目前仅为本地预览保留去除 EXIF（含 GPS、设备、拍摄时间）的副本；原件不在本项目或候选发布包内。三个副本路径已加入当前项目及独立候选发布包的 `.gitignore`，不应提交到 GitHub。**Git 忽略不等于网页防下载**：若网站展示照片，浏览器仍必须取得可保存的图像数据；从本地构建时也必须检查 `dist/` 是否复制了这些文件。照片不属于 CC0、CC BY 或项目代码的 PolyForm Noncommercial 许可，第三方复用须另获摄影者许可。
+六张照片由项目作者作为普通游客自行拍摄，仅在本地保留去除 EXIF（含 GPS、设备、拍摄时间）的副本；目前网页已改用下列 Commons 替代图，**本地预览也不调用自摄照**。原件不在本项目或候选发布包内。六个副本路径已加入本仓库的 `.gitignore`，不应提交到 GitHub；构建脚本还会从 `dist/` 移除这些路径。**Git 忽略不等于网页防下载**：若将来决定展示自摄照，访客仍能保存网页取得的版本。照片不属于 CC0、CC BY 或项目代码的 PolyForm Noncommercial 许可，第三方复用须另获摄影者许可。
 
-本站为非商业科普项目；宾大两张为无禁拍标识区域的游客拍摄，不售卖影像。[宾大拍摄规则](https://www.penn.museum/about-collections/rights-and-permissions)未对这类照片提出网页展示的明确预先申请要求；[馆方可下载图片的条款](https://www.penn.museum/about/statements-and-policies/terms-and-conditions)只适用于馆方提供的图片，不自动覆盖自摄照片。纳尔逊照片也不是商业或专业摄影；[摄影规则](https://nelson-atkins.org/visit/guidelines-and-policies/)允许一般游客拍照，但未明确说明公开作品集展示。本站采取审慎发布策略：待馆方书面确认后再公开该张照片。这不是声称馆方规则已明确要求游客为所有非商业网页展示预先申请。馆方拍摄规则与摄影者的著作权是不同问题。
+本站为非商业科普项目；宾大两张为无禁拍标识区域的游客拍摄，不售卖影像。[宾大拍摄规则](https://www.penn.museum/about-collections/rights-and-permissions)未对这类照片提出网页展示的明确预先申请要求；[馆方可下载图片的条款](https://www.penn.museum/about/statements-and-policies/terms-and-conditions)只适用于馆方提供的图片，不自动覆盖自摄照片。纳尔逊两张照片也不是商业或专业摄影；[摄影规则](https://nelson-atkins.org/visit/guidelines-and-policies/)允许一般游客拍照，但未明确说明公开作品集展示。皇家安大略博物馆[访客摄影规则](https://www.rom.on.ca/visit/visitor-information)写明普通馆内摄影限个人用途；线上展示不应据此擅自推定获准。因此六张自摄照仍不公开。如未来无可用替代图，须先逐馆复核展示条件，再考虑发布去除敏感信息的自摄版本；馆方拍摄规则与摄影者的著作权是不同问题。
+
+## 第一阶段与皇家安大略壁画的开放替代图 · Verified open replacements
+
+以下 14 张均在 `src/museum/catalog.js` 中逐件标注文件页和许可；馆藏身份另由各件 `source` 的馆方目录核对。站点分发的是网页尺寸 JPEG，已移除下载件的 EXIF/其他元数据；CC BY/CC BY-SA 的缩放与元数据处理在展品署名中说明或由本段统一说明。摄影者许可只覆盖相应照片；馆方资料、场地政策与摄影者许可是不同层面的权利。
+
+- 大英易县罗汉 1913,1221.1：[Midnightblueowl / Commons](https://commons.wikimedia.org/wiki/File:Luohan_at_British_Museum.JPG)，[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)；`bm-luohan-open.jpg`。
+- 《女史箴图》局部：[Commons Scene 10](https://commons.wikimedia.org/wiki/File:Admonitions_Scroll_Scene_10.jpg)，Public Domain Mark；`bm-admonitions-open.jpg`。
+- 大维德花瓶 PDF,B.613–614：[Szilas / Commons](https://commons.wikimedia.org/wiki/File:The_David_Vases.jpg)，摄影者声明公有领域；`bm-david-vases-open.jpg`。
+- 南海观音 34-10：[Dean Hochman / Commons](https://commons.wikimedia.org/wiki/File:Guanyin_of_the_southern_sea_(8425213585).jpg)，[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)；`nelson-guanyin-open.jpg`。
+- 皇后礼佛图 40-38：[Daderot / Commons](https://commons.wikimedia.org/wiki/File:Procession_of_the_Empress_as_Donor_with_Her_Court,_Chinese,_from_the_Binyang_Cave,_Longmen,_Henan_Province,_Norther_Wei_Dynasty,_about_522_-_Nelson-Atkins_Museum_of_Art_-_DSC09118.JPG)，CC0；`nelson-empress-open.jpg`。
+- 飒露紫 C395：[SnowFire / Commons](https://commons.wikimedia.org/wiki/File:Emperor_Taizong_Horse_Relief_Saluzi.jpg)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；`penn-saluzi-open.jpg`。
+- 拳毛騧 C396：[SnowFire / Commons](https://commons.wikimedia.org/wiki/File:Emperor_Taizong_Horse_Relief_Quanmaogua.jpg)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；`penn-quanmaogua-open.jpg`。
+- 犀牛形青铜尊 B60B1+：[Ed Bierman / Commons](https://commons.wikimedia.org/wiki/File:Bronze_Rhino_(8216203650).jpg)，[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)；`aam-rhino-open.jpg`。
+- 《洛神赋图》局部 F1914.53：[Commons](https://commons.wikimedia.org/wiki/File:Gu_Kaizhi_river_Lo.jpg)，PD-Art / Public Domain Mark；`freer-luo-nymph-open.jpg`。
+- 李迪《红白芙蓉图》之一 TA-137：[Google Art Project / Commons](https://commons.wikimedia.org/wiki/File:Li_Di_-_Red_and_White_Cotton_Roses_-_Google_Art_Project.jpg)，PD-Art / Public Domain Mark；`tnm-hibiscus-open.jpg`。
+- 玉猪龙 MG18396：[Sailko / Commons](https://commons.wikimedia.org/wiki/File:Cultura_di_hongshan_(neolitico),_oggetto_rituale_zhulong_(dragone-maiale)_in_nefrite,_da_lianing,_3500_ac._ca.JPG)，[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)；`guimet-pig-dragon-open.jpg`。
+- 打马球女俑 MA 6118：[Caroline Léna Becker / Commons](https://commons.wikimedia.org/wiki/File:Joueuse_de_polo_MA_6118.jpg)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；`guimet-polo-open.jpg`。
+- 《弥勒净土变》933.6.1：[Daderot / Commons](https://commons.wikimedia.org/wiki/File:The_Paradise_of_Maitreya,_painted_by_Zhu_Haogu_and_Zhang_Boyuan,_Xinghua_Monastery,_Shanxi_Province,_China,_Yuan_Dynasty,_1298,_ink_and_color_on_clay_-_Royal_Ontario_Museum_-_DSC09829.JPG)，CC0；`rom-maitreya-open.jpg`。
+- 《朝元图》东壁 933.6.3：[Daderot / Commons](https://commons.wikimedia.org/wiki/File:Homage_to_the_Highest_Power,_probably_Longmen_Monastery,_Shanxi_Province,_China,_Yuan_Dynasty,_c._1300_-_Royal_Ontario_Museum_-_DSC09823.JPG)，CC0；`rom-homage-east-open.jpg`。
 
 ## 第二阶段新增 30 条的照片
 
@@ -39,7 +61,7 @@
 - 宾大广胜寺《炽盛光佛图》C492：摄影 [Mary Harrsch](https://commons.wikimedia.org/wiki/File:Tejaprabha_and_Assembly_Tempera_on_mud_mixed_with_seeds,_straw_and_leaves,_1475_CE_Ming_Dynasty_Shanxi_Province,_Zhaocheng_Guangsheng_Monastery_China_02.jpg)，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)；站内使用的是局部视角。
 - 克利夫兰水月观音 1984.7：[馆方 / Commons 文件页](https://commons.wikimedia.org/wiki/File:Clevelandart_1984.7.jpg)，[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)。
 
-以上 CC BY / CC BY-SA 照片在作品详情同时标明摄影者、Commons 文件页及许可。若进一步裁切、调色或改作 CC BY-SA 图片，应按相同许可处理改作版本，并注明改动。第一阶段其他沿用图片不因此自动变成开放许可：吉美馆方署名照及 Smithsonian `Usage Conditions Apply` 图仍须在公开发布前替换或单独核对适用范围，详见 `MUSEUM-SOURCES.md`。
+以上 CC BY / CC BY-SA 照片在作品详情同时标明摄影者、Commons 文件页及许可。若进一步裁切、调色或改作 CC BY-SA 图片，应按相同许可处理改作版本，并注明改动。第一阶段被排除的吉美馆方署名照及 Smithsonian `Usage Conditions Apply` 图已由本页列出的开放替代图取代，仍不随公开构建分发。
 
 ## 第三阶段新增 6 条的图像处理
 

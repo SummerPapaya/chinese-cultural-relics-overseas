@@ -1,14 +1,18 @@
-# 海外中国文物地图 / Relics Overseas Atlas
+<p align="center"><img src="./assets/readme/hero.gif" width="100%" alt="山海归藏：金色地球串起海外中国文物馆藏；Shanhai Museum, a bilingual atlas of Chinese cultural relics overseas"></p>
 
-以 React + Three.js 构建的中英双语响应式 H5。第一阶段收录 20 条馆藏记录；当前版本已扩充至 56 条、13 家海外馆藏机构，并在可旋转地球上连接“现藏地”和有证据支持的“故乡”。文物与图片的核验仍将继续；当前版本尚未发布。
+<p align="center"><a href="https://chinese-relics-overseas.summercommences.com/">在线参观 / Visit the museum</a> · <a href="./assets/readme/hero.svg">静态 SVG / Static hero</a></p>
 
-A bilingual, responsive React + Three.js museum. Phase I began with 20 records; this version contains 56 records across 13 museums. A rotating globe connects current collections to documented places of origin. Research and image-rights review are ongoing; this version has not been published.
+# 海外中国文物地图 / Map of Chinese Cultural Relics Overseas
+
+以 React + Three.js 构建的中英双语响应式虚拟博物馆。第一阶段收录 20 条馆藏记录；当前本地开发版已扩充至 57 条、13 家海外馆藏机构，并在可旋转地球上连接“现藏地”和有证据支持的“故乡”。[网站已上线](https://chinese-relics-overseas.summercommences.com/)；本地新改动尚未推送，线上内容可能暂时落后。文物资料与图像权利核验仍将继续。
+
+A bilingual, responsive React + Three.js virtual museum. Phase I began with 20 records; this local working version contains 57 records across 13 museums. A rotating globe connects current collections to documented places of origin. The [website is live](https://chinese-relics-overseas.summercommences.com/), but these local changes have not been pushed, so the public site may lag behind. Research and image-rights review continue.
 
 ## 发布范围 / Publication scope
 
-本目录是**当前博物馆版本的独立候选发布包**。只把本目录作为 GitHub 仓库根目录；不要上传其上级工作目录。未收录旧项目首页、旧预览、嵌套旧仓库、生成的构建产物或本机配置。`index.html` 与 `museum.html` 均进入当前博物馆落地页。公开发布前仍须清理部分第一阶段图片的再分发权利，详见 `ATTRIBUTIONS.md` 与 `MUSEUM-SOURCES.md`。
+本目录是**当前博物馆版本的独立仓库**。只把本目录作为 GitHub 仓库根目录；不要上传其上级工作目录。未收录旧项目首页、旧预览、嵌套旧仓库、生成的构建产物或本机配置。`index.html` 与 `museum.html` 均进入当前博物馆落地页。图片优先采用逐件核验的开放替代图；仍无合适图片时保留馆藏记录和占位，详见 `ATTRIBUTIONS.md` 与 `MUSEUM-SOURCES.md`。
 
-This directory is a standalone candidate for the current museum version. Use **this directory only** as the GitHub repository root, not its parent workspace. Older pages, previews, nested repositories, build output and local configuration are excluded. Both `index.html` and `museum.html` open the current museum landing page. Some Phase I images still need redistribution-rights clearance before a public release; see the attribution and source notes.
+This directory is the standalone repository for the current museum. Use **this directory only** as the GitHub repository root, not its parent workspace. Older pages, previews, build output and local configuration are excluded. Both `index.html` and `museum.html` open the museum landing page. Object-matched reusable images are preferred; records without a suitable image remain visible with placeholders. See the attribution and source notes.
 
 ## 本地运行
 
@@ -24,35 +28,29 @@ npm run build
 npm run preview
 ```
 
-构建结果位于 `dist/`。项目使用相对资源路径，可部署在根域名或 GitHub Pages 子路径。
+构建结果位于 `dist/`。构建脚本会从产物中移除 `.gitignore` 明列的 `public/` 本地自摄照片与已停用/待清权文件；部署前仍应检查最终产物。项目使用相对资源路径，可部署在根域名或子路径。
 
 ## 交互与技术方案
 
 - React 负责双语、检索、分类筛选、博物馆/文物切换与响应式详情面板。
-- React Three Fiber / Three.js 渲染地球、准确经纬度点位、故乡弧线与移动光点。
-- 真实地球纹理确保地形轮廓准确，再通过低饱和、青绿染色、纸纹与朱砂标记形成水墨风。
-- 已核实可再分发的文物图片本地化；尚未清权的图片在公开版本显示占位并链接馆方原页。
+- Three.js 按 Natural Earth 国界数据渲染粒子地球、国家轮廓、准确经纬度点位与有证据支持的故乡弧线。
+- 地球以低饱和金色粒子呈现；青绿山水为原创程序化意境演绎，不是馆方原画扫描。
+- 已核实可再分发的文物图片本地化，逐件展示摄影者、许可和原始文件页；目前 57 条记录中 55 条有图片，另外 2 条显示占位并链接馆方原页。
 - Three.js 独立懒加载；小红书 User-Agent 和“减少动态效果”系统设置默认进入省流模式，用户仍可手动切换 3D。
 
-## 部署方案（推荐顺序）
+## 部署 / Deployment
 
-### 1. Vercel（最快）
+线上入口：[chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/)。本仓库不含自动发布工作流；推送代码不等于已更新网站。若使用 Cloudflare Pages，从 GitHub 连接本仓库，选择 Vite、Node 22、`npm run build`、输出目录 `dist`，并将该子域名绑定到 Pages 项目。若使用 Vercel，导入同一仓库；`vercel.json` 已配置构建命令与输出目录，再将子域名指向该项目。具体生产平台需以实际账户配置为准，不能仅由域名推断。
 
-1. 在 GitHub 新建仓库并推送本目录。
-2. 打开 [Vercel New Project](https://vercel.com/new)，导入仓库。
-3. Vercel 会读取 `vercel.json`：Build Command 为 `npm run build`，Output Directory 为 `dist`。
-4. 点击 Deploy。建议随后绑定自定义域名，便于小红书配置域名白名单。
+Live site: [chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/). This repository contains no automatic deployment workflow; a Git push does not by itself update the site. For Cloudflare Pages, connect this repository and use Vite, Node 22, `npm run build`, and `dist`, then bind the subdomain. For Vercel, import the repository, use the included `vercel.json`, and attach the same subdomain. The actual hosting provider should be checked in the account settings rather than inferred from the domain.
 
-### 2. Cloudflare Pages（国内外访问通常更稳）
+无论哪种平台，**只部署由本仓库清洁构建得到的 `dist/`**，不要上传其他项目的工作目录或旧的本地产物。图片替换后需复核署名、许可和最终构建文件；六张自摄照仍不公开。
 
-1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git。
-2. Framework preset 选择 `Vite`。
-3. Build command 填 `npm run build`，Build output directory 填 `dist`，Node 版本建议 22。
-4. 部署后绑定自定义域名；`public/_headers` 会自动提供缓存和基础安全响应头。
+Whichever platform is used, **deploy only a clean `dist/` built from this repository**, never the parent workspace or an older local build. Recheck credits, rights, and final files after image changes; the six creator-shot photos remain unpublished.
 
-### 3. GitHub Pages（如将来需要）
+本次新增的 favicon 与分享缩略图需要随下一次构建一起发布。发布后请确认 `/favicon-32.png` 和 `/og-shanhai.png` 分别返回 PNG 图片，而非站点的 HTML 回退页面；若分享卡片仍显示旧图，需在对应平台重新抓取链接。
 
-当前公开仓库不包含可执行部署工作流，因此推送代码**不会**自动发布网站。若未来选择 GitHub Pages，应在图片发布权利确认后，使用具备相应权限的 GitHub 账户另行添加工作流并手动启用；目前建议先按上面的 Cloudflare Pages 方案评估部署。
+The favicon and social preview image go live with the next build. After deployment, verify that `/favicon-32.png` and `/og-shanhai.png` return PNG images rather than the site's HTML fallback. Social platforms may cache an older card until the link is re-scraped.
 
 ## 小红书小程序 / 小组件上线（重要）
 
@@ -76,8 +74,8 @@ npm run preview
 
 `LICENSE` 将本项目原创软件代码置于 [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0) 条款下：允许非商业使用、修改和再分发；**商业项目使用代码须另获权利人许可**。这是附有非商业条件的源码许可，不属于 OSI 意义上的开源许可。馆藏照片、其他视觉素材、馆方资料与嵌入的编辑文字不受该代码许可覆盖，逐项权利见 `ATTRIBUTIONS.md`。
 
-项目作者自摄的南海观音、飒露紫、拳毛騧照片保留所有权利，未采用 CC 开放许可。三个本地预览文件已写入 `.gitignore`，不得作为候选 GitHub 仓库的内容提交。忽略源文件只能避免仓库克隆直接取得照片；**若网站公开显示图片，访客仍能从网页请求或截图获得显示版本**。另有 10 张馆藏照片和 1 张来源待核的旧地球纹理暂不纳入公开仓库；13 条对应馆藏记录保留并显示权利占位。当前本机的 `dist/` 已含被排除的图片，且重新从带照片的本地 `public/` 构建仍会复制它们；不得直接手动上传这个 `dist/`。仅从不含这些文件的 GitHub 仓库自动构建，才会生成上述占位版本。
+项目作者自摄的南海观音、皇后礼佛图、飒露紫、拳毛騧、皇家安大略博物馆《弥勒净土变》及《朝元图》东壁照片保留所有权利，未采用 CC 开放许可。六个本地副本已写入 `.gitignore`，不得提交，也不再被页面调用。忽略源文件只能避免仓库克隆直接取得照片；**若未来网站公开显示自摄照，访客仍能从网页请求或截图获得显示版本**。原先使用六张自摄照与八张待清权继承照的 14 条馆藏记录现已改用 Commons 开放替代图，逐件署名和许可见 `ATTRIBUTIONS.md`。旧照及来源待核的旧地球纹理仍不纳入公开仓库；构建脚本还会将其从 `dist/` 移除。旧本地产物可能仍含排除项，部署前须重新构建并检查。目前仅波士顿罗汉与 V&A 宜兴茶壶两条记录显示占位。
 
-宾大两张是普通游客在无禁拍标识区域拍摄，本站不售卖图片。纳尔逊照片也并非商业或专业摄影；但为避免把“允许游客拍照”误认为“明确允许公开作品集展示”，本站谨慎地在取得馆方书面确认前不随公开网站发布该张照片。不要把宾大官网可下载图片的使用条件套用到这些自摄照片；若改用馆方图片，应另按其非商业教育、署名及链接条款逐张处理。
+宾大两张是普通游客在无禁拍标识区域拍摄，本站不售卖图片。纳尔逊两张照片也并非商业或专业摄影；但为避免把“允许游客拍照”误认为“明确允许公开作品集展示”，本站谨慎地在取得馆方书面确认前不随公开网站发布这两张照片。皇家安大略博物馆的[访客摄影规则](https://www.rom.on.ca/visit/visitor-information)限定个人用途，两张新照片亦暂不公开。不要把馆方可下载图片的使用条件套用到自摄照片；若改用馆方图片，应另按其条款逐张处理。
 
-The PolyForm Noncommercial 1.0.0 terms linked in `LICENSE` cover original software code only. Noncommercial use, modification and distribution are permitted; commercial use requires separate permission. This is source-available, not OSI open source. Photographs, other visuals, museum records, and embedded editorial text retain separate rights. The three creator-shot museum photographs remain all rights reserved and are ignored by Git. Ten further object photographs and an inherited earth texture are also withheld pending source or redistribution review. The 13 records remain searchable with rights placeholders. Keeping files out of Git prevents direct retrieval from the repository, but does not prevent saving an image shown on a public website. The existing local `dist/` contains withheld images; do not manually deploy it. Build from the clean Git repository instead. Obtain written clarification from Nelson-Atkins before publicly displaying the Guanyin photograph.
+The PolyForm Noncommercial 1.0.0 terms linked in `LICENSE` cover original software code only. Noncommercial use, modification and distribution are permitted; commercial use requires separate permission. This is source-available, not OSI open source. Photographs, other visuals, museum records, and embedded editorial text retain separate rights. The six creator-shot museum photographs remain all rights reserved, Git-ignored, and unused by the site. Fourteen formerly unillustrated records now use individually verified Commons alternatives with photographer, file-page and licence credits; two records still use placeholders. Older uncleared images and an inherited earth texture remain excluded. Keeping a photo out of Git does not prevent saving an image shown on a public website. The build strips explicitly ignored public assets from `dist/`; rebuild and inspect before deploying. If an open substitute cannot be found later, review the venue's rules before considering a metadata-stripped creator-shot version.

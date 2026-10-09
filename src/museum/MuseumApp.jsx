@@ -22,7 +22,7 @@ function ObjectImage({ object, language, ...props }) {
 }
 function RecordNotes({object,language}) {
   const t=(zh,en)=>language==='zh'?zh:en
-  return <>{object.imageCaptionZh&&<p className="record-note">{pick(object,'imageCaption',language)}</p>}{object.noteZh&&<p className="record-note">{pick(object,'note',language)}</p>}{object.sourceExtra&&<a className="source-extra" href={object.sourceExtra} target="_blank" rel="noreferrer">{t('补充资料','Further reading')}<ArrowUpRight size={13}/></a>}{object.imageSource&&<a className="source-extra" href={object.imageSource} target="_blank" rel="noreferrer">{t('本图来源','Source of this image')}<ArrowUpRight size={13}/></a>}</>
+  return <>{object.imageCaptionZh&&<p className="record-note">{pick(object,'imageCaption',language)}</p>}{object.noteZh&&<p className="record-note">{pick(object,'note',language)}</p>}{object.sourceExtra&&<a className="source-extra" href={object.sourceExtra} target="_blank" rel="noreferrer">{t('补充资料','Further reading')}<ArrowUpRight size={13}/></a>}{object.imageSource&&<a className="source-extra" href={object.imageSource} target="_blank" rel="noreferrer">{t('本图来源','Source of this image')}<ArrowUpRight size={13}/></a>}{object.imageLicense&&<a className="source-extra" href={object.imageLicense} target="_blank" rel="noreferrer">{t('图片许可','Image license')}<ArrowUpRight size={13}/></a>}</>
 }
 function Modal({ children, label, onClose, className='' }) {
   const ref = useRef()

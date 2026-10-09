@@ -4,6 +4,21 @@ const photo = name => `${import.meta.env?.BASE_URL || './'}art/${name}`
 
 export const supplementalRelics = [
   {
+    id:'rom-homage-east',museumId:'rom',category:'painting',image:null,
+    nameZh:'《朝元图》东壁（神仙赴会图）',nameEn:'Homage to the Highest Power (East Wall)',
+    dateZh:'元代，约13世纪末',dateEn:'Yuan dynasty, late 13th century',
+    mediumZh:'泥壁水墨设色',mediumEn:'Ink and colour on clay wall',
+    originZh:'山西，原寺观归属尚有争议',originEn:'Shanxi; original temple attribution remains uncertain',
+    originPrecision:'unknown',homePoint:null,
+    descZh:'这幅道教壁画描绘神祇列队朝拜。照片呈现东壁中央局部；原寺观地点未作精确定位，避免把研究推测当成确定出土地。',
+    descEn:'This Daoist mural depicts a procession of deities paying homage. The photograph shows the central portion of the east wall; the original temple is not pinpointed because its attribution remains uncertain.',
+    accession:'933.6.3',source:'https://collections.rom.on.ca/objects/304291/daoist-wall-painting-homage-to-the-highest-power-east-wal',
+    sourceExtra:'https://www.rom.on.ca/whats-on/galleries/bishop-white-gallery-chinese-temple-art',
+    imageCaptionZh:'东壁中央局部，非整幅壁画。',imageCaptionEn:'Central detail of the east wall, not the full mural.',
+    creditZh:'图片署名见馆藏目录；藏品资料：皇家安大略博物馆，933.6.3。',
+    creditEn:'Image credit in the museum catalogue; object data: Royal Ontario Museum, 933.6.3.',
+  },
+  {
     id:'yixian-rom',museumId:'rom',category:'sculpture',image:photo('yixian-rom-open.jpg'),
     nameZh:'易县三彩罗汉坐像',nameEn:'Figure of a Luohan',dateZh:'辽至金代，11世纪',dateEn:'Liao–Jin period, 11th century',
     mediumZh:'模制施釉陶，高126.5厘米',mediumEn:'Moulded glazed earthenware, 126.5 cm high',

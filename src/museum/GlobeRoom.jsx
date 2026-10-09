@@ -14,6 +14,21 @@ function landMask(world) {
   }
   return ctx.getImageData(0,0,2048,1024).data
 }
+function countryBorders(world){
+  const points=[]
+  for(const feature of world.features){
+    const polygons=feature.geometry.type==='Polygon'?[feature.geometry.coordinates]:feature.geometry.coordinates
+    for(const polygon of polygons)for(const ring of polygon)for(let i=1;i<ring.length;i++){
+      const [lngA,latA]=ring[i-1],[lngB,latB]=ring[i]
+      // A dateline wrap is not a border crossing the whole globe.
+      if(Math.abs(lngA-lngB)>180)continue
+      points.push(...globePoint(latA,lngA,R+.031),...globePoint(latB,lngB,R+.031))
+    }
+  }
+  const geometry=new THREE.BufferGeometry()
+  geometry.setAttribute('position',new THREE.Float32BufferAttribute(points,3))
+  return new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:'#d3ac6b',transparent:true,opacity:.33,depthWrite:false}))
+}
 function glowTexture() {
   const c=document.createElement('canvas');c.width=64;c.height=64
   const ctx=c.getContext('2d'),g=ctx.createRadialGradient(32,32,0,32,32,32)
@@ -58,16 +73,17 @@ export default function GlobeRoom({language,selected,onMuseum,onHover,motion,aut
     const depthShell=new THREE.Mesh(new THREE.SphereGeometry(R*.993,64,40),new THREE.MeshBasicMaterial({color:'#020305',depthWrite:true}));globe.add(depthShell)
     fetch(`${import.meta.env.BASE_URL}data/world-countries.geojson`,{signal:abort.signal}).then(r=>{if(!r.ok)throw Error('Map unavailable');return r.json()}).then(world=>{
       if(disposed)return
+      globe.add(countryBorders(world))
       const mask=landMask(world),positions=[],seeds=[],surfaces=[]
       // Equal-area samples avoid artificial particle crowding near the poles.
-      const n=window.matchMedia('(max-width:760px)').matches?90000:145000,golden=Math.PI*(3-Math.sqrt(5))
+      const n=window.matchMedia('(max-width:760px)').matches?110000:195000,golden=Math.PI*(3-Math.sqrt(5))
       for(let i=0;i<n;i++){
         const lat=Math.asin(1-2*(i+.5)/n)*180/Math.PI,lng=(i*golden*180/Math.PI)%360-180
         const x=Math.min(2047,Math.floor((lng+180)/360*2048)),y=Math.min(1023,Math.floor((90-lat)/180*1024))
         const land=mask[(y*2048+x)*4+3]>180
         // A quieter ocean point field preserves the whole globe at every longitude.
         // It lies on the SAME surface as the land, not on a separate outer shell.
-        if(land||i%2===0){
+        if(land||i%3!==0){
           // Subpixel angular jitter breaks the mechanical Fibonacci striping.
           const latJitter=Math.sin(i*127.1)*.055,lngJitter=Math.cos(i*311.7)*.055/Math.max(.16,Math.cos(lat*Math.PI/180))
           positions.push(...globePoint(lat+latJitter,lng+lngJitter,R+.015));seeds.push((i*.73)%6.28);surfaces.push(land?1:0)
@@ -78,13 +94,13 @@ export default function GlobeRoom({language,selected,onMuseum,onHover,motion,aut
         vertexShader:`attribute float seed;attribute float land;varying float s;varying float isLand;varying float facing;uniform float ratio;
           void main(){s=seed;isLand=land;vec3 n=normalize(normalMatrix*normalize(position));vec4 p=modelViewMatrix*vec4(position,1.);
           facing=max(0.,dot(n,normalize(-p.xyz)));gl_Position=projectionMatrix*p;
-          gl_PointSize=clamp(13.5/-p.z,.8,1.65)*ratio;}`,
+          gl_PointSize=clamp(11.3/-p.z,.7,1.4)*ratio;}`,
         fragmentShader:`uniform float time;uniform float breath;varying float s;varying float isLand;varying float facing;
           void main(){float d=length(gl_PointCoord-.5);if(d>.5)discard;
           float core=1.-smoothstep(.07,.43,d);float shimmer=.86+.12*sin(s*2.4+time*.44);
           float rim=pow(1.-facing,2.5);float softEdge=smoothstep(.0,.14,facing);
           float ocean=.20+rim*.23;float continent=.80-rim*.12;
-          float a=core*shimmer*breath*mix(ocean,continent,isLand)*softEdge;
+          float a=1.38*core*shimmer*breath*mix(ocean,continent,isLand)*softEdge;
           vec3 gold=mix(vec3(.66,.47,.25),vec3(1.,.83,.54),.44+.22*sin(s*3.1));
           gl_FragColor=vec4(gold,a);}`})
       globe.add(new THREE.Points(g,particleMaterial));state.dirty=true;setReady(true)

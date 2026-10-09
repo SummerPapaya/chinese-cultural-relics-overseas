@@ -4,6 +4,7 @@
     <path id="ruyi-petal" d="M48 36C41 33 31 29 32 21C33 15 40 14 44 18C43 13 45 9 48 8C51 9 53 13 52 18C56 14 63 15 64 21C65 29 55 33 48 36Z"/>
     <path id="cloud-scroll" d="M29 15C19 15 13 23 16 30C18 35 26 36 29 31C32 26 28 22 24 23C21 23 21 27 24 28"/>
   </defs>
+  <rect width="96" height="96" rx="18" fill="#24140f"/>
   <circle cx="48" cy="48" r="44" fill="#24140f" stroke="#d4b57a" stroke-width="1.6"/>
   <circle cx="48" cy="48" r="40.5" stroke="#957346" stroke-width=".7"/>
   <g stroke="#dfc28b" stroke-width="1.8" stroke-linejoin="round">

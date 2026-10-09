@@ -63,6 +63,10 @@ export default function LandscapeBackdrop(){
       if(document.hidden||!visible||now-last<40||reduced&&!dirty)return
       const dt=Math.min((now-last)/1000,.07);last=now;if(!reduced)time+=dt
       x=THREE.MathUtils.lerp(x,targetX,.055);y=THREE.MathUtils.lerp(y,targetY,.055);yaw=THREE.MathUtils.lerp(yaw,targetYaw,.085)
+      // Keep the hand-painted clouds in the same camera motion as the landscape.
+      section.style.setProperty('--cloud-scene-x',`${(-yaw*section.clientWidth*.16-x*16).toFixed(1)}px`)
+      section.style.setProperty('--cloud-scene-y',`${(-y*8).toFixed(1)}px`)
+      section.style.setProperty('--cloud-scene-yaw',`${(-yaw*14).toFixed(2)}deg`)
       const mobile=camera.aspect<1
       // On a phone, frame a section of the scroll rather than cropping both peaks.
       const scrollOffset=mobile?.7:0

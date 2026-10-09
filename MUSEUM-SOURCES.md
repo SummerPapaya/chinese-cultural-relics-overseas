@@ -1,12 +1,14 @@
 # 新版预览图像及资料补充
 
-> 公开 GitHub 候选包为清权版本：三张项目作者实拍、十张仍待精确核实再分发权利的继承馆藏照，以及来源未补齐的 `earth-ink.jpg` 均已加入 `.gitignore`，不随仓库分发。对应 13 条馆藏记录保留，图片在公开构建中显示占位。本文其余段落描述本地研究与预览，不表示所有本地图像均可上传。
+> 公开版本优先使用逐件核对身份与许可的开放图片。原先 14 条图片占位记录已有 Wikimedia Commons 替代图，摄影者、许可及文件原页见 `ATTRIBUTIONS.md`；六张项目作者自摄、八张旧版待清权继承馆藏照，以及已停用的旧版皇后礼佛图、弥勒壁画和来源未补齐的 `earth-ink.jpg` 仍加入 `.gitignore`，不随仓库分发。波士顿罗汉与 V&A 茶壶目前仍显示占位。
 
-## 当前本地预览 · 56 条馆藏
+## 当前本地预览 · 57 条馆藏
 
 第一阶段 20 条基础上，第二阶段新增 30 条，见 `src/museum/expanded-data.js`；其中 24 条来自大都会 Open Access，另六条来自宾大、纳尔逊、克利夫兰。第三阶段再新增 6 条，见 `src/museum/supplemental-data.js`：皇家安大略与波士顿各一尊罗汉、大英博物馆两幅敦煌绘画，以及 V&A 的御座与紫砂壶。馆藏号和文物信息按馆方原页核对；波士顿罗汉的“易县”归属另有宾大及芝加哥大学研究支持，不能说成波士顿馆方已确认的出土地。易县罗汉专题现收录 7 条，广胜寺壁画 4 条，水月观音 4 条。画册、成对花瓶及由多块重组的完整壁画按一条馆藏记录计算。
 
-原址精确度独立于现藏馆坐标：馆方明确原址时只画概略位置，只有地区归属或“传出”资料时不画精确故乡点；未查明作地不以中国地理中心代替。新增记录都附中英文简介、年代、媒材、馆藏号与馆方链接。图片选择优先公有领域、CC0 和注明摄影者的可再分发 CC 照片；波士顿罗汉与 V&A 茶壶因尚无可核对的开放照片而显示占位。旧 20 条的图像许可仍需独立清理，不能把新增图片核验结果外推到所有图片。
+第四阶段本地新增皇家安大略博物馆《朝元图》东壁 933.6.3 一条，与现有《弥勒净土变》不是同一壁画。东壁照片为中央局部；[ROM 藏品记录](https://collections.rom.on.ca/objects/304291/daoist-wall-painting-homage-to-the-highest-power-east-wal)与[馆方展厅说明](https://www.rom.on.ca/whats-on/galleries/bishop-white-gallery-chinese-temple-art)分别支持作品身份及三幅元代寺观壁画的展陈。原寺观归属在文献中存在分歧，不绘制精确故乡点。两条记录现在使用 Daderot / Commons 的 CC0 图；本站作者自摄照仍只在本地保留且不被网页调用。
+
+原址精确度独立于现藏馆坐标：馆方明确原址时只画概略位置，只有地区归属或“传出”资料时不画精确故乡点；未查明作地不以中国地理中心代替。新增记录都附中英文简介、年代、媒材、馆藏号与馆方链接。图片选择优先公有领域、CC0 和注明摄影者的可再分发 CC 照片；波士顿罗汉与 V&A 茶壶因尚无可核对的开放照片而显示占位。旧 20 条中曾被排除的八张照片已换成开放替代图，其他图片的原有许可不因此改变。
 
 所有原始文物记录见 `src/data.js`、`src/museum/expanded-data.js` 与 `src/museum/supplemental-data.js`，由 `src/museum/catalog.js` 合并。中英文简介由本站整理，不是馆方逐字翻译。
 
@@ -18,8 +20,8 @@
 - V&A：[乾隆雕漆御座 W.399:1, 2-1922](https://www.vam.ac.uk/articles/va-trail-explore-as-a-family)与[宜兴茶壶 C.871&A-1936](https://www.vam.ac.uk/articles/teapots-through-time)由馆方专题页核对。御座与南苑团河行宫的关系在研究叙述中是推测，不画精确故乡点。
 
 - 九龙图画心局部：`public/art/mfa-nine-dragons-verified.jpg`。来源：[Wikimedia Commons文件页](https://commons.wikimedia.org/wiki/File:Nine_Dragons,_detail,_Song_Dynasty.jpg)。文件页标记PD-Art / 公有领域，注明来源Michael Sullivan, *The Arts of China* (1999)；作品为陈容1244年《九龙图》，MFA 17.1697。[馆方记录](https://collections.mfa.org/objects/28526)。原`mfa-nine-dragons.jpg`为题跋画面，旧版保留，新版不用。
-- 洛神赋图局部：`public/art/freer-luo-nymph-verified.jpg`。来源：[Smithsonian IIIF](https://ids.si.edu/ids/iiif/FS-F1914.53_Stitched/3200,0,1050,651/full/0/default.jpg)。[馆方记录F1914.53](https://asia.si.edu/object/F1914.53/)。媒体为Usage Conditions Apply，并非CC0；用于当前非商业教育预览，公开使用前须按馆方[使用说明](https://www.si.edu/openaccess/faq)核对适用范围。
-- 第一阶段其余图片继承原`ATTRIBUTIONS.md`，未重新授予许可。吉美馆方图等不可一律视为公有领域；部分继承的 Commons 图片尚缺精确文件来源页。南海观音、飒露紫、拳毛騧现已换成项目作者的馆内实拍照片，详见`ATTRIBUTIONS.md`；场馆拍摄/发布条件仍须独立核对。
+- 洛神赋图局部：原 `public/art/freer-luo-nymph-verified.jpg` 是 [Smithsonian IIIF](https://ids.si.edu/ids/iiif/FS-F1914.53_Stitched/3200,0,1050,651/full/0/default.jpg) 的 `Usage Conditions Apply` 图，现已停用且排除；网页改用 [Commons 的同卷局部](https://commons.wikimedia.org/wiki/File:Gu_Kaizhi_river_Lo.jpg)，PD-Art / Public Domain Mark。[馆方记录 F1914.53](https://asia.si.edu/object/F1914.53/)用于核对藏品身份。
+- 第一阶段的吉美馆方署名图及其他来源待核继承图不应一律视为公有领域；相关在用条目已在 `src/museum/catalog.js` 中换成文件级核验的 Commons 图，详见 `ATTRIBUTIONS.md`。南海观音、飒露紫、拳毛騧等本站作者自摄照仍不公开。
 - [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/)地理数据为公有领域；现实地形纹理继承自旧项目`earth-ink.jpg`，原始下载来源尚需补齐。
 - 原创展厅氛围素材使用内置imagegen一次生成，与实际文物图片分离。
 

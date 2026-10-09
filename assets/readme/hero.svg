@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">山海归藏 · 海外中国文物地图</title>
+  <desc id="desc">深墨色山水之上，一颗金色经纬地球连起远方馆藏；中英双语呈现项目名称与宗旨。</desc>
+  <defs>
+    <linearGradient id="night" x2="0" y2="1"><stop stop-color="#0b0d0d"/><stop offset="1" stop-color="#171712"/></linearGradient>
+    <linearGradient id="hill" x2="0" y2="1"><stop stop-color="#25403d" stop-opacity=".55"/><stop offset="1" stop-color="#12211f" stop-opacity=".06"/></linearGradient>
+    <radialGradient id="planet"><stop stop-color="#5c492d" stop-opacity=".26"/><stop offset=".72" stop-color="#332a1d" stop-opacity=".13"/><stop offset="1" stop-color="#0d0e0c" stop-opacity="0"/></radialGradient>
+    <clipPath id="disc"><circle cx="950" cy="205" r="137"/></clipPath>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="url(#night)"/>
+  <path d="M0 346c82-47 144-37 220-76 92-50 148-25 234 8 85 32 133 9 196-25 53-28 102-19 145 5 86 49 140 18 205-24v186H0Z" fill="url(#hill)"/>
+  <path d="M0 365c147-39 217-21 316-52 135-42 231 34 343-2 86-27 137 1 214 24 118 35 219-22 327-41" fill="none" stroke="#697b67" stroke-opacity=".23" stroke-width="1.5"/>
+  <path d="M0 385c180-22 271 3 412-16 131-18 210 11 326-2 163-19 303-4 462-13" fill="none" stroke="#9c9a72" stroke-opacity=".16"/>
+  <g id="identity">
+    <path d="M73 66h29M73 66v30" stroke="#9d4634" stroke-width="3"/>
+    <text x="118" y="78" fill="#d3b884" font-family="Songti SC, Georgia, serif" font-size="21" letter-spacing="5">山海归藏</text>
+    <text x="76" y="168" fill="#f2e6cd" font-family="Songti SC, Georgia, serif" font-size="57" font-weight="600" letter-spacing="2">海外中国文物地图</text>
+    <text x="78" y="212" fill="#d7b67b" font-family="Georgia, serif" font-size="24" letter-spacing="1">Map of Chinese Cultural Relics Overseas</text>
+    <path d="M78 240h76" stroke="#9c4838" stroke-width="3"/>
+    <text x="78" y="280" fill="#d2c5ae" font-family="Songti SC, Georgia, serif" font-size="22">循一缕微光，重见散落山海的文化记忆。</text>
+    <text x="78" y="316" fill="#adaba0" font-family="Georgia, serif" font-size="18">Follow the light. Discover the stories behind the objects.</text>
+  </g>
+  <g id="globe-proof">
+    <circle cx="950" cy="205" r="162" fill="url(#planet)"/>
+    <circle cx="950" cy="205" r="137" fill="none" stroke="#a58a58" stroke-opacity=".62" stroke-width="1.4"/>
+    <g clip-path="url(#disc)" fill="none" stroke="#b69760" stroke-opacity=".48">
+      <ellipse cx="950" cy="205" rx="65" ry="137" stroke-width="1.2"/>
+      <ellipse cx="950" cy="205" rx="111" ry="137" stroke-width=".8"/>
+      <path d="M813 205h274M822 160c61 25 195 25 256 0M822 250c61-25 195-25 256 0"/>
+      <path d="M842 111c47 62 149 66 217 13M843 299c58-56 147-57 215-6" stroke-opacity=".25"/>
+      <path d="M851 178c22-25 43-25 60-12 15 12 25 4 34-12 11-18 38-22 60-7 14 9 34 7 50-5M832 230c33-7 56 10 66 31 13 28 35 30 52 15 24-22 54-25 79-13 18 8 36 8 56-2" stroke="#e1bf78" stroke-opacity=".30" stroke-width="2" stroke-dasharray="2 6"/>
+    </g>
+    <g fill="#e1bf79" opacity=".82">
+      <circle cx="842" cy="141" r="1.6"/><circle cx="859" cy="123" r="1.4"/><circle cx="881" cy="112" r="1.6"/><circle cx="903" cy="100" r="1.2"/><circle cx="929" cy="92" r="1.5"/><circle cx="971" cy="91" r="1.2"/><circle cx="998" cy="101" r="1.5"/><circle cx="1025" cy="116" r="1.2"/><circle cx="1051" cy="139" r="1.5"/><circle cx="1067" cy="166" r="1.3"/><circle cx="1077" cy="200" r="1.5"/><circle cx="1069" cy="239" r="1.3"/><circle cx="1053" cy="269" r="1.6"/><circle cx="1032" cy="289" r="1.3"/><circle cx="999" cy="312" r="1.5"/><circle cx="961" cy="326" r="1.3"/><circle cx="921" cy="324" r="1.5"/><circle cx="884" cy="311" r="1.3"/><circle cx="856" cy="289" r="1.5"/><circle cx="832" cy="253" r="1.2"/><circle cx="824" cy="215" r="1.4"/>
+    </g>
+    <g id="journey-line" fill="none" stroke="#d7a967" stroke-width="2" stroke-linecap="round">
+      <path d="M857 211Q932 97 1035 174" stroke-dasharray="3 6"/>
+      <path d="M1035 174Q1024 239 966 283" stroke-opacity=".72" stroke-dasharray="2 7"/>
+    </g>
+    <g id="museum-lights" fill="#f6dba5" stroke="#a94b39" stroke-width="2">
+      <circle cx="857" cy="211" r="7"/><circle cx="1035" cy="174" r="7"/><circle cx="966" cy="283" r="6"/>
+    </g>
+  </g>
+  <path d="M75 365h1050" stroke="#c0a572" stroke-opacity=".30"/>
+  <text x="78" y="395" fill="#b7a282" font-family="Georgia, serif" font-size="17" letter-spacing="2">BILINGUAL MUSEUM</text>
+  <text x="494" y="395" fill="#b7a282" font-family="Georgia, serif" font-size="17" letter-spacing="2">VERIFIED RECORDS</text>
+  <text x="819" y="395" fill="#b7a282" font-family="Georgia, serif" font-size="17" letter-spacing="2">INTERACTIVE WORLD</text>
+</svg>

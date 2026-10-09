@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">山海归藏 · 海外中国文物地图</title>
+  <desc id="desc">暗色山水、金色地球与散落海外馆藏的光点。</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#080c0d"/><stop offset="1" stop-color="#20221b"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#ac8650" stop-opacity=".26"/><stop offset="1" stop-color="#ac8650" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <path d="M0 489c123-55 217-57 317-116 83-48 148-31 222 8 84 45 124-2 203-45 72-39 111-10 175 22 84 41 159 17 283-40v312H0Z" fill="#1b3432" opacity=".5"/>
+  <path d="M0 533c151-36 236-6 346-48 96-37 157-29 250 2 116 38 187 6 263-24 140-57 200-1 341-19" fill="none" stroke="#849579" stroke-opacity=".34" stroke-width="2"/>
+  <path d="M0 566c208-27 331 18 471-8 197-37 302 37 511-6 84-17 149-10 218-8" fill="none" stroke="#b5a278" stroke-opacity=".24"/>
+  <circle cx="942" cy="288" r="242" fill="url(#halo)"/>
+  <g fill="none" stroke="#c5a366" stroke-opacity=".65"><circle cx="942" cy="286" r="188" stroke-width="2"/><ellipse cx="942" cy="286" rx="88" ry="188"/><ellipse cx="942" cy="286" rx="151" ry="188"/><path d="M754 286h376M779 214c86 32 250 32 326 0M779 359c83-31 245-30 326 0"/></g>
+  <path d="M804 291Q934 142 1071 263M1071 263Q995 396 901 413" fill="none" stroke="#e8be79" stroke-width="3" stroke-dasharray="5 10"/>
+  <g fill="#f4daa6" stroke="#a94837" stroke-width="3"><circle cx="804" cy="291" r="9"/><circle cx="1071" cy="263" r="9"/><circle cx="901" cy="413" r="9"/></g>
+  <path d="M76 74h45M76 74v44" stroke="#a84532" stroke-width="4"/>
+  <text x="142" y="92" fill="#d6bd8b" font-family="Songti SC, Georgia, serif" font-size="30" letter-spacing="7">山海归藏</text>
+  <text x="78" y="232" fill="#f4e9d0" font-family="Songti SC, Georgia, serif" font-size="70" font-weight="600">海外中国文物地图</text>
+  <text x="80" y="292" fill="#dec18c" font-family="Georgia, serif" font-size="28">Map of Chinese Cultural Relics Overseas</text>
+  <path d="M80 329h84" stroke="#ad4a37" stroke-width="4"/>
+  <text x="80" y="386" fill="#d6cbb5" font-family="Songti SC, Georgia, serif" font-size="26">循光寻藏，重见散落山海的文化记忆。</text>
+  <text x="80" y="430" fill="#b8b2a5" font-family="Georgia, serif" font-size="21">An immersive, bilingual virtual museum</text>
+  <text x="80" y="588" fill="#aa9b7b" font-family="Georgia, serif" font-size="19" letter-spacing="2">CHINESE-RELICS-OVERSEAS.SUMMERCOMMENCES.COM</text>
+</svg>
