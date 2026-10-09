@@ -4,9 +4,9 @@
 
 # 海外中国文物地图 / Map of Chinese Cultural Relics Overseas
 
-以 React + Three.js 构建的中英双语响应式虚拟博物馆。第一阶段收录 20 条馆藏记录；当前本地开发版已扩充至 57 条、13 家海外馆藏机构，并在可旋转地球上连接“现藏地”和有证据支持的“故乡”。[网站已上线](https://chinese-relics-overseas.summercommences.com/)；本地新改动尚未推送，线上内容可能暂时落后。文物资料与图像权利核验仍将继续。
+以 React + Three.js 构建的中英双语响应式虚拟博物馆。第一阶段收录 20 条馆藏记录；当前仓库已扩充至 57 条、13 家海外馆藏机构，并在可旋转地球上连接“现藏地”和有证据支持的“故乡”。[网站已上线](https://chinese-relics-overseas.summercommences.com/)；线上内容以最后一次成功部署为准。文物资料与图像权利核验仍将继续。
 
-A bilingual, responsive React + Three.js virtual museum. Phase I began with 20 records; this local working version contains 57 records across 13 museums. A rotating globe connects current collections to documented places of origin. The [website is live](https://chinese-relics-overseas.summercommences.com/), but these local changes have not been pushed, so the public site may lag behind. Research and image-rights review continue.
+A bilingual, responsive React + Three.js virtual museum. Phase I began with 20 records; the repository now contains 57 records across 13 museums. A rotating globe connects current collections to documented places of origin. The [website is live](https://chinese-relics-overseas.summercommences.com/); its content reflects the latest successful deployment. Research and image-rights review continue.
 
 ## 发布范围 / Publication scope
 
@@ -40,9 +40,9 @@ npm run preview
 
 ## 部署 / Deployment
 
-线上入口：[chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/)。本仓库不含自动发布工作流；推送代码不等于已更新网站。若使用 Cloudflare Pages，从 GitHub 连接本仓库，选择 Vite、Node 22、`npm run build`、输出目录 `dist`，并将该子域名绑定到 Pages 项目。若使用 Vercel，导入同一仓库；`vercel.json` 已配置构建命令与输出目录，再将子域名指向该项目。具体生产平台需以实际账户配置为准，不能仅由域名推断。
+线上入口：[chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/)。当前使用 Cloudflare Workers 静态资源部署，`wrangler.jsonc` 对应现有 Worker，资源目录为 `dist/`。在该 Worker 的 Settings → Build 中，将 Build command 设为 `npm run build`、Deploy command 设为 `npx wrangler deploy`，并使用 Node 22 或更新版本。部署前须检查构建产物；Git 推送只有在 Workers 构建成功后才会更新线上网站。
 
-Live site: [chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/). This repository contains no automatic deployment workflow; a Git push does not by itself update the site. For Cloudflare Pages, connect this repository and use Vite, Node 22, `npm run build`, and `dist`, then bind the subdomain. For Vercel, import the repository, use the included `vercel.json`, and attach the same subdomain. The actual hosting provider should be checked in the account settings rather than inferred from the domain.
+Live site: [chinese-relics-overseas.summercommences.com](https://chinese-relics-overseas.summercommences.com/). The site uses Cloudflare Workers Static Assets. `wrangler.jsonc` targets the existing Worker and serves `dist/`. In that Worker's Settings → Build, set the Build command to `npm run build` and Deploy command to `npx wrangler deploy`, using Node 22 or newer. Inspect the build output before deployment; a Git push updates the live site only after the Workers build succeeds.
 
 无论哪种平台，**只部署由本仓库清洁构建得到的 `dist/`**，不要上传其他项目的工作目录或旧的本地产物。图片替换后需复核署名、许可和最终构建文件；六张自摄照仍不公开。
 

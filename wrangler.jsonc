@@ -1,0 +1,7 @@
+{
+  "name": "chinese-cultural-relics-overseas",
+  "compatibility_date": "2026-10-09",
+  "assets": {
+    "directory": "./dist"
+  }
+}
